@@ -20,7 +20,7 @@ return
 Pause::Suspend
 `::Esc
 $+`::~
-$^`::·
+$^`::Send ``
 Insert::
 prevClipboard = %clipboard%
 Send ^c
@@ -77,14 +77,3 @@ WinMove, ahk_id %EWD_MouseWin%,, EWD_WinX + EWD_MouseX - EWD_MouseStartX, EWD_Wi
 EWD_MouseStartX := EWD_MouseX
 EWD_MouseStartY := EWD_MouseY
 return
-
-;Other
-;^!c::
-;Send {Enter}{Asc 96}shortkeymode on{Enter}
-;Send {Enter}{Asc 96}chatview 101111{Enter}
-;Send {Enter}{Asc 96}pickupmode{Enter}
-;Send {Enter}{Asc 96}music off{Enter}
-;Send {Enter}{Asc 96}sound off{Enter}
-;return
-;^!w::Send RocketBoy{Enter}
-;return
