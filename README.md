@@ -1,7 +1,6 @@
-# Various AutoHotkey scripts.
+# Various AutoHotkey scripts
 
 * HHKB style
-* Math symbols
+* Symbols
 * Volume control
 * Easy window movement
-* Fast input in MMORPGs
