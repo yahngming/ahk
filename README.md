@@ -1,6 +1,5 @@
 # Various AutoHotkey scripts
 
-* HHKB style
+* HHKB layout
+* KDE style window movement
 * Symbols
-* Volume control
-* Easy window movement
