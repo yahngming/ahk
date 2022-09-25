@@ -1,33 +1,12 @@
-$Esc::
-    prevClipboard = %clipboard%
-    Send ^c
-    Run https://www.google.com/search?q=%clipboard%
-    clipboard = %prevClipboard%
-    return
-ScrollLock::
-    WinSet,AlwaysOnTop,,A
-Pause::
-    Pause
-`::
-    Esc
-$+`::
-    ~
-$^`::
-    Send ``
-Insert::
-    prevClipboard = %clipboard%
-    Send ^c
-    clipboard = %prevClipboard%`r`n%clipboard%
-    return
-CapsLock::
-    Ctrl
-<+RShift::
-    CapsLock
->+LShift::
-    CapsLock
-LCtrl::
-    return
-
+PrintScreen::#+S
+`::Esc
+$+`::~
+$^`::Send ``
++Backspace::Del
+CapsLock::Ctrl
+<+RShift::CapsLock
+>+LShift::CapsLock
+Ctrl::#Space
 !LButton::
     CoordMode,Mouse
     MouseGetPos,KDE_X1,KDE_Y1,KDE_id
@@ -53,24 +32,12 @@ LCtrl::
     return
 !WheelUp::
     MouseGetPos,,,KDE_id
-    WinGet,KDE_Win,MinMax,ahk_id %KDE_id%
-    If KDE_Win
-        WinRestore,ahk_id %KDE_id%
-    Else
-        WinMaximize,ahk_id %KDE_id%
+    WinMaximize,ahk_id %KDE_id%
     return
 !WheelDown::
     MouseGetPos,,,KDE_id
-    PostMessage,0x112,0xf020,,,ahk_id %KDE_id%
+    WinRestore,ahk_id %KDE_id%
     return
-
-:*?:+-::±
-:*?:\/::×
-:*?:/\::×
-:*?:./.::÷
-:*?:=/=::≠
-:*?:u..::ü
-:*?:''::°
 
 KDE_Drag:
     GetKeyState,KDE_Button,LButton,P
@@ -89,7 +56,6 @@ KDE_Drag:
     KDE_X1 += KDE_X2
     KDE_Y1 += KDE_Y2
     return
-
 KDE_Resize:
     GetKeyState,KDE_Button,RButton,P
     If KDE_Button = U
@@ -110,3 +76,11 @@ KDE_Resize:
     KDE_X1 += KDE_X2
     KDE_Y1 += KDE_Y2
     return
+
+:*?:+-::±
+:*?:\/::×
+:*?:/\::×
+:*?:./.::÷
+:*?:=/=::≠
+:*?:u..::ü
+:*?:''::°
