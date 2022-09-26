@@ -1,4 +1,7 @@
+$Esc::#`
 PrintScreen::#+S
+ScrollLock::WinSet,AlwaysOnTop,,A
+Pause::Pause
 `::Esc
 $+`::~
 $^`::Send ``
@@ -6,7 +9,7 @@ $^`::Send ``
 CapsLock::Ctrl
 <+RShift::CapsLock
 >+LShift::CapsLock
-Ctrl::#Space
+LCtrl::#Space
 !LButton::
     CoordMode,Mouse
     MouseGetPos,KDE_X1,KDE_Y1,KDE_id
